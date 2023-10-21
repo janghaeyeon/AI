@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>OpenAI API Call</title>
+</head>
+<body>
+<h1>Ask 2 OpenAI</h1>
+<form th:action="@{/ask}" method="post">
+    <input type="text" name="question" placeholder="Type your question here...">
+    <button type="submit">Ask</button>
+</form>
+<div th:text="${answer}"></div>
+</body>
+</html>

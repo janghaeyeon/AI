@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Question Answering</title>
+</head>
+<body>
+<h1>음식의 효능 API</h1>
+
+<form action="/ask" method="post">
+    <h2><label for="question">질문:</label><br></h2>
+    <textarea id="question" name="question" rows="4" cols="50" required></textarea><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+<h2>질문:</h2>
+<p th:text="${question}">질문 내용이 여기에 표시됩니다.</p>
+<h2>답:</h2>
+<td>
+<p th:text="${answer}">Your answer will appear here.</p>
+</td>
+</body>
+</html>
