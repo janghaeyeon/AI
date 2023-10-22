@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Question Answering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>OpenAI 질문 응답 시스템</h1>
+
+<form action="/ask11" method="post">
+    <label for="question">질문:</label><br>
+    <textarea id="question" name="question" rows="4" required></textarea><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+<h2>답:</h2>
+<p th:text="${answer}">여기에 답변이 표시됩니다.</p>
+
+</body>
+</html>
